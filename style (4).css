@@ -1,0 +1,77 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #1a1a1a;
+}
+
+body::webkit-sidebar-thumb{
+  background: transparent;
+}
+
+.heart{
+  position: absolute;
+  color: red;
+
+  animation: rain 5s linear;
+}
+
+i{
+  color: gray;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 90px;
+  transition: color 0.3s ease-out;
+}
+
+.fizz{
+  color: red;
+  text-shadow: 5px 5px 100px #9d0101;
+  transition: color 0.3s ease;
+
+  animation: colorChange 6s infinite;
+}
+
+i:active{
+  font-size: 85px;
+}
+
+@keyframes colorChange{
+  0%{
+    text-shadow: 5px 5px 100px #ff0000;
+  }
+  50%{
+    text-shadow: 5px 5px 100px #ffc7c7;
+  }
+  100%{
+    text-shadow: 5px 5px 100px #ff0000;
+  }
+}
+
+@keyframes rain{
+  to{
+    transform: translateY(100vh);
+  }
+  0%{
+    font-size: 35px;
+    text-shadow: 2px 2px 50px red;
+  }
+  50%{
+    font-size: 25px;
+    text-shadow: 2px 2px 50px red;
+  }
+  100%{
+    font-size: 15px;
+    text-shadow: 2px 2px 50px red;
+  }
+}
